@@ -127,10 +127,70 @@ h3 {
   border-radius: 0.5rem;
   width: 90%;
   text-align: center;
+  border: none;
 }
  
 @media (min-width: 768px) {
   .boton {
     width: auto;
   }
+}
+
+/* Mis Servicios */
+
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    /* Grid define el tamaño de las columnas */
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio h3 {
+  color: var(--secundario);
+  font-weight: bold;
+}
+
+.servicio {
+  /* intelineado */
+  line-height: 2;
+  text-align: center;
+  /*font-style: italic; */
+}
+
+.servicio .iconos {
+  height: 15rem; 
+  width: 15rem;
+  background-color: var(--primario);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Contacto */
+
+.boton:hover {
+  cursor: pointer; /*progress*/
+}
+
+.formulario {
+  background-color: var(--gris);
+  /* Ahorra MQ. ¿Qué es más pequeño, 60rem o 100% del ancho? */
+  width: min(60rem, 100%);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
 }
